@@ -1,5 +1,5 @@
-import java.io.*;
-import java.util.*;
+   import java.io.*;
+   import java.util.*;
 /**
 * HourlyEmployee class is an employee record object with four fields: 
 
@@ -113,17 +113,15 @@ import java.util.*;
        public void calcPay ()
       {
       
-      
-                 
-         
-            regularPay = hoursWorked * hourlyRate;
-         
-         
+         if (hoursWored > 40)
+         {
+            overtimePay = (hoursWorked - 40)* hourlyRate * 1.5;
+         }
+         else
+         {
             overtimePay = 0;
-         
-         
-        
-      
+            regularPay = hoursWorked * hourlyRate;
+         }
       
       } 
        public String getName ()
